@@ -1,0 +1,181 @@
+<!doctype html>
+
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pastel Calm — Laman Utama</title>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- App Shell -->
+  <div id="app" class="app">
+
+```
+<!-- Home Screen -->
+<main id="page-home" class="page page-active" aria-label="Laman Utama">
+  <header class="topbar">
+    <h1>🏠 Laman Utama</h1>
+  </header>
+
+  <section class="grid-home">
+    <button class="big-btn mood" data-target="page-mood" aria-label="Mood Tracker">🌈<span>Mood<br>Tracker</span></button>
+    <button class="big-btn calm" data-target="page-calm" aria-label="Quick Calm">🌸<span>Quick<br>Calm</span></button>
+    <button class="big-btn jar" data-target="page-jar" aria-label="Affirmation Jar">💌<span>Affirm<br>Jar</span></button>
+    <button class="big-btn relax" data-target="page-relax" aria-label="Relax Zone">🎧<span>Relax<br>Zone</span></button>
+  </section>
+
+  <section class="quote">
+    “Hari ini aku cukup, walaupun dunia terasa berat.”
+  </section>
+
+  <footer class="home-footer">
+    <div class="mini-info">Blossom Points: <span id="points">0</span></div>
+  </footer>
+</main>
+
+<!-- Mood Tracker Page (slide-in) -->
+<section id="page-mood" class="page slide-page" aria-hidden="true" aria-label="Mood Tracker">
+  <nav class="page-top">
+    <button class="back-btn" data-back>←</button>
+    <h2>🌈 Mood Tracker</h2>
+  </nav>
+
+  <div class="page-content">
+    <p class="muted">Pilih emosi, tambah nota, simpan. Animasi bunga mekar bila mood positif.</p>
+
+    <div class="mood-row">
+      <button class="m-emoji" data-mood="gembira">😊<br><small>Gembira</small></button>
+      <button class="m-emoji" data-mood="tenang">😌<br><small>Tenang</small></button>
+      <button class="m-emoji" data-mood="letih">😴<br><small>Letih</small></button>
+      <button class="m-emoji" data-mood="marah">😠<br><small>Marah</small></button>
+      <button class="m-emoji" data-mood="sedih">😢<br><small>Sedih</small></button>
+    </div>
+
+    <input id="mood-note" class="input" placeholder="Tambah nota pendek (contoh: penat study)" />
+
+    <div class="row">
+      <button id="save-mood" class="btn primary">Simpan</button>
+      <button id="clear-mood" class="btn">Batal</button>
+    </div>
+
+    <h3 class="section-title">Grafik Mingguan</h3>
+    <div id="mood-chart" class="chart" aria-hidden="false"></div>
+
+    <h3 class="section-title">Log</h3>
+    <ul id="mood-log" class="log-list" aria-live="polite"></ul>
+  </div>
+</section>
+
+<!-- Quick Calm Page -->
+<section id="page-calm" class="page slide-page" aria-hidden="true" aria-label="Quick Calm">
+  <nav class="page-top">
+    <button class="back-btn" data-back>←</button>
+    <h2>🌸 Quick Calm</h2>
+  </nav>
+
+  <div class="page-content">
+    <p class="muted">Modul untuk bertenang dalam ≤ 3 minit.</p>
+
+    <div class="calm-block">
+      <div class="bubble" id="bubble" aria-hidden="true"></div>
+      <div id="breath-text" class="breath-text">Ikuti pernafasan...</div>
+      <div class="row">
+        <button id="start-breath" class="btn primary">Mula (1 min)</button>
+        <button id="skip-breath" class="btn">Stop</button>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      <h3 class="section-title">Mindful Minute</h3>
+      <p class="muted">Cabaran singkat: “Sebut 3 perkara yang kamu nampak sekarang.”</p>
+      <button id="mindful-btn" class="btn">Mulakan</button>
+    </div>
+
+    <div class="mt-6">
+      <h3 class="section-title">Muscle Relax</h3>
+      <p class="muted">Animasi 30 saat regangan badan.</p>
+      <button id="muscle-btn" class="btn">Mulakan 30s</button>
+    </div>
+  </div>
+</section>
+
+<!-- Affirmation Jar Page -->
+<section id="page-jar" class="page slide-page" aria-hidden="true" aria-label="Affirmation Jar">
+  <nav class="page-top">
+    <button class="back-btn" data-back>←</button>
+    <h2>💌 Affirmation Jar</h2>
+  </nav>
+
+  <div class="page-content">
+    <p class="muted">Tekan “Shake” → keluar mesej rawak. Simpan kegemaran.</p>
+
+    <div class="jar-visual" aria-hidden="true">
+      <div class="jar-glass"></div>
+    </div>
+
+    <div class="row mt-4">
+      <button id="shake-btn" class="btn primary">Shake</button>
+      <button id="save-affirm" class="btn">Simpan</button>
+    </div>
+
+    <div id="affirm-text" class="affirm-text" aria-live="polite"></div>
+    <div class="mt-3 muted">Favorit: <span id="fav-count">0</span></div>
+  </div>
+</section>
+
+<!-- Relax Zone Page -->
+<section id="page-relax" class="page slide-page" aria-hidden="true" aria-label="Relax Zone">
+  <nav class="page-top">
+    <button class="back-btn" data-back>←</button>
+    <h2>🎧 Relax Zone</h2>
+  </nav>
+
+  <div class="page-content">
+    <p class="muted">Pilihan bunyi menenangkan dan timer tidur.</p>
+
+    <div class="sound-grid">
+      <button class="sound-btn" data-sound="rain">🌧 Hujan</button>
+      <button class="sound-btn" data-sound="waves">🌊 Ombak</button>
+      <button class="sound-btn" data-sound="forest">🌲 Hutan</button>
+      <button class="sound-btn" data-sound="piano">🎹 Piano</button>
+    </div>
+
+    <div class="mt-4">
+      <audio id="player" controls preload="none"></audio>
+      <div class="row mt-2">
+        <label for="timer">Timer (min)</label>
+        <input id="timer" type="number" min="0" max="120" value="0" class="input-small" />
+        <button id="set-timer" class="btn">Set</button>
+        <button id="stop-sound" class="btn">Stop</button>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      <h3 class="section-title">Guided Audio</h3>
+      <button id="guided-btn" class="btn">Play Guided (sample)</button>
+    </div>
+
+    <div class="wave-visual" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav" role="navigation" aria-label="Tab bar">
+  <button class="nav-btn" data-target="page-home">🏠</button>
+  <button class="nav-btn" data-target="page-mood">🌈</button>
+  <button class="nav-btn" data-target="page-calm">🌸</button>
+  <button class="nav-btn" data-target="page-relax">🎧</button>
+  <button class="nav-btn" data-target="page-jar">💌</button>
+</nav>
+```
+
+  </div>
+
+  <!-- Link JS -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
