@@ -288,10 +288,10 @@ document.getElementById('muscle-btn').addEventListener('click', () => {
 /* ========== RELAX ZONE ========== */
 const player = document.getElementById('player');
 const sounds = {
-  rain: 'https://cdn.jsdelivr.net/gh/johnjleider/soundfiles@main/rain.mp3',
-  waves: 'https://cdn.jsdelivr.net/gh/johnjleider/soundfiles@main/waves.mp3',
-  forest: 'https://cdn.jsdelivr.net/gh/johnjleider/soundfiles@main/forest.mp3',
-  piano: 'https://cdn.jsdelivr.net/gh/johnjleider/soundfiles@main/piano.mp3'
+  rain: 'music/rain.mp3',
+  waves: 'music/waves.mp3',
+  forest: 'music/forest.mp3',
+  piano: 'music/piano.mp3'
 };
 
 let timerHandle = null;
