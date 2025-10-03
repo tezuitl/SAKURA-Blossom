@@ -192,7 +192,6 @@ const affirmations = [
   "I am proud of my progress, no matter how small.",
   "Gelap malam hanya sementara, fajar tetap akan menyapa.",
   "Kesilapan bukan kegagalan, ia adalah guru.",
-  "",
 ];
 
 const affirmText = document.getElementById('affirm-text');
