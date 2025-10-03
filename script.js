@@ -180,16 +180,19 @@ function triggerFlower() {
 
 /* ========== AFFIRMATION JAR ========== */
 const affirmations = [
-  "Aku lebih kuat daripada cabaran ini.",
-  "Langkah kecil hari ini membawa perubahan besar.",
+  "Layu sebentar tidak bermakna kau gagal, kau hanya sedang rehat untuk mekar semula.",
+  "Menangis tidak menjadikanmu lemah, ia menjadikanmu manusia.",
   "Aku layak untuk rehat dan sayang pada diri sendiri.",
   "Setiap hari adalah peluang baru untuk belajar.",
-  "Tarik nafas — semuanya akan baik.",
-  "I am capable of achieving great things.",
+  "Ruang kosong dalam hati adalah tempat untuk harapan baru tumbuh.",
+  "You am capable of achieving great things.",
   "Every challenge helps me grow stronger.",
   "I deserve happiness and peace.",
   "Today is a fresh start full of possibilities.",
-  "I am proud of my progress, no matter how small."
+  "I am proud of my progress, no matter how small.",
+  "Gelap malam hanya sementara, fajar tetap akan menyapa.",
+  "Kesilapan bukan kegagalan, ia adalah guru.",
+  "",
 ];
 
 const affirmText = document.getElementById('affirm-text');
