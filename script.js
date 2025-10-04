@@ -185,7 +185,7 @@ const affirmations = [
   "Aku layak untuk rehat dan sayang pada diri sendiri.",
   "Setiap hari adalah peluang baru untuk belajar.",
   "Ruang kosong dalam hati adalah tempat untuk harapan baru tumbuh.",
-  "You am capable of achieving great things.",
+  "You are capable of achieving great things.",
   "Every challenge helps me grow stronger.",
   "I deserve happiness and peace.",
   "Today is a fresh start full of possibilities.",
